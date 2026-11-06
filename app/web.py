@@ -79,7 +79,7 @@ def headers(res):
 
 @app.route("/healthz")
 def health():
-    return jsonify(status="ok", version="0.5.0")
+    return jsonify(status="ok", version="0.5.1")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -366,3 +366,15 @@ def localize_response(response):
 @app.get("/api/document-defaults")
 def document_defaults():
     return jsonify(settings.get("document_defaults", {}))
+
+
+@app.context_processor
+def language_options():
+    from i18n import TRANSLATIONS
+
+    return {
+        "languages": {
+            code: phrases.get("_language_name", code)
+            for code, phrases in TRANSLATIONS.items()
+        }
+    }

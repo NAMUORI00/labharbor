@@ -21,4 +21,4 @@ Status requests share a five-second cache and inspect containers in a single Doc
 
 ## Languages
 
-Add a JSON file under `app/locales`. Keys are canonical Korean source messages and values are localized strings. `Accept-Language` chooses a supported language; an authenticated session selection overrides it. Keep placeholders/units intact. Lab names and entered guide content are user-authored data, not automatically translated. PDF language is selected independently.
+Add a JSON file under `app/locales` with `_language_name` as its displayed name. The selector discovers it automatically. Keys are canonical Korean source messages and values are localized strings. `Accept-Language` chooses a supported language; an authenticated session selection overrides it. Keep placeholders/units intact. Lab names and entered guide content are user-authored data, not automatically translated. PDF language is selected independently.
