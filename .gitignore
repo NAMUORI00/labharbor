@@ -11,3 +11,4 @@ outputs/
 backups/
 policy.json
 web.json
+dist/
