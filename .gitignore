@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+wheels/
+manifest.json
+*.private.*
+*.local.*
+.env
+.env.*
+outputs/
+backups/
+policy.json
+web.json
